@@ -6,9 +6,9 @@ from .models import Post
 from django.contrib.auth.models import Group
 
 # Home
-def home(request):
+def index(request):
  posts = Post.objects.all()
- return render(request, 'blog/home.html', {'posts':posts})
+ return render(request, 'blog/index.html', {'posts':posts})
 
 # About
 def about(request):
